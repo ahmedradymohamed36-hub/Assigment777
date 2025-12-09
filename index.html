@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="text-center">
+      <button class="random-btn" id="randomRecipeBtn">
+        اختر وصفة عشوائية 🍽️
+      </button>
+    </div>
+
+    <nav class="navbar navbar-expand-lg mynav">
+      <div class="container-fluid mx-2">
+        <div class="nav-l d-flex gap-3 align-items-center">
+          <div class="nav-li d-flex justify-content-center">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div class="nav-lt align-content-center">
+            <h1>What's For Dinner</h1>
+            <p>Your daily meal inspiration</p>
+          </div>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="nav-r ms-auto">
+            <div class="r-icon d-flex gap-3 align-items-center fs-5">
+              <i class="fa-solid fa-bookmark"></i>
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <i class="fa-solid fa-gear"></i>
+              <div class="image-r">
+                <img src="../image/avatar-1-CwUcGkzI.jpg" alt="nav photo" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="jo">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-5">
+            <div class="innerr">
+              <div class="image">
+                <img class="w-100" id="recipeImage" src="" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-7">
+            <div class="container">
+              <div class="inner">
+                <div class="cont d-flex justify-content-between p-3">
+                  <div class="cont-l">
+                    <div class="tags d-flex gap-3">
+                      <div class="tag1">
+                        <span id="recipeLevel"></span>
+                      </div>
+                      <div class="tag2">
+                        <span id="recipeCuisine"></span>
+                      </div>
+                    </div>
+
+                    <h2 id="recipeTitle"></h2>
+                    <p id="recipeDesc"></p>
+                  </div>
+
+                  <div class="cont-r gap-3 d-flex">
+                    <div class="bookm">
+                      <i class="fa-solid fa-bookmark"></i>
+                    </div>
+                    <div class="bookm">
+                      <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="danger d-flex gap-2" id="recipeWarning">
+                  <div class="ex">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                  </div>
+                  <div class="danger-t">
+                    <p>Extended Preparation Time</p>
+                    <div class="po">
+                      <p>
+                        This recipe requires more than 45 minutes to prepare.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB NAV -->
+            <div class="ulstyle">
+              <ul class="nav nav-underline mb-3">
+                <li class="nav-item">
+                  <button
+                    class="nav-link active"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-Ingredients"
+                  >
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Ingredients</span>
+                  </button>
+                </li>
+
+                <li class="nav-item">
+                  <button
+                    class="nav-link"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-Instruction"
+                  >
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Instruction</span>
+                  </button>
+                </li>
+
+                <li class="nav-item">
+                  <button
+                    class="nav-link"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-Nutrition"
+                  >
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Nutrition</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <!-- TAB CONTENT -->
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="pills-Ingredients">
+                <div class="ingred-b" id="recipeIngredients"></div>
+              </div>
+
+              <div class="tab-pane fade" id="pills-Instruction">
+                <div id="recipeInstructions"></div>
+              </div>
+
+              <div class="tab-pane fade" id="pills-Nutrition">
+                <div class="Nutrition">
+                  <div class="row mt-4">
+                    <div class="col-xl-6 d-flex justify-content-between bo">
+                      <div class="nut-r d-flex gap-2">
+                        <div class="nut-i">
+                          <i class="fa-solid fa-fire"></i>
+                        </div>
+                        <p class="mt-1">Calories</p>
+                      </div>
+                      <div class="nut-l"><span id="nutCalories"></span></div>
+                    </div>
+                    <div class="col-xl-6 d-flex justify-content-between bo">
+                      <div class="nut-r d-flex gap-2">
+                        <div class="nut-ip">
+                          <i class="fa-solid fa-dumbbell"></i>
+                        </div>
+                        <p class="mt-1">Protein</p>
+                      </div>
+                      <div class="nut-l"><span id="nutProtein"></span></div>
+                    </div>
+                  </div>
+
+                  <div class="row mt-4">
+                    <div class="col-xl-6 d-flex justify-content-between bo">
+                      <div class="nut-r d-flex gap-2">
+                        <div class="nut-ic">
+                          <i class="fa-solid fa-wheat-awn"></i>
+                        </div>
+                        <p class="mt-1">Carbohydrates</p>
+                      </div>
+                      <div class="nut-l"><span id="nutCarbs"></span></div>
+                    </div>
+                    <div class="col-xl-6 d-flex justify-content-between bo">
+                      <div class="nut-r d-flex gap-2">
+                        <div class="nut-id">
+                          <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <p class="mt-1">Fat</p>
+                      </div>
+                      <div class="nut-l"><span id="nutFat"></span></div>
+                    </div>
+                  </div>
+
+                  <div class="row mt-4">
+                    <div class="col-xl-6 d-flex justify-content-between bo">
+                      <div class="nut-r d-flex gap-2">
+                        <div class="nut-is">
+                          <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <p class="mt-1">Fiber</p>
+                      </div>
+                      <div class="nut-l"><span id="nutFiber"></span></div>
+                    </div>
+                    <div class="col-xl-6 d-flex justify-content-between bo">
+                      <div class="nut-r d-flex gap-2">
+                        <div class="nut-ic">
+                          <i class="fa-solid fa-cube"></i>
+                        </div>
+                        <p class="mt-1">Sodium</p>
+                      </div>
+                      <div class="nut-l"><span id="nutSodium"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
