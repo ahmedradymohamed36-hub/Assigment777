@@ -1,7 +1,7 @@
 const recipes = [
         {
           title: "French Onion Soup",
-          img: "../image/photo-1546069901-eacef0df6022.avif",
+          img: "photo-1546069901-eacef0df6022.avif",
           description: "Rich caramelized onion soup.",
           prepTime: 60,
           level: "Intermediate",      
@@ -30,7 +30,7 @@ const recipes = [
 
         {
           title: "Chicken Alfredo Pasta",
-          img: "../image/photo-1546069901-eacef0df6022.avif",
+          img: "photo-1546069901-eacef0df6022.avif",
           description: "Creamy parmesan chicken pasta.",
           prepTime: 40,
           level: "Easy",
@@ -59,7 +59,7 @@ const recipes = [
 
         {
           title: "Beef Tacos",
-          img: "../image/photo-1546069901-eacef0df6022.avif",
+          img: "photo-1546069901-eacef0df6022.avif",
           description: "Mexican style crispy tacos.",
           prepTime: 50,
           level: "Easy",
